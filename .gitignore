@@ -1,0 +1,27 @@
+# Composer
+/vendor/
+
+# Local databases
+storage/*.sqlite
+storage/*.sqlite3
+storage/*.db
+!storage/.gitkeep
+
+# Environment and sensitive configs
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+Thumbs.db
+Desktop.ini

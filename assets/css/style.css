@@ -1,0 +1,321 @@
+/* ==========================================================================
+   Buku Tamu Digital - Modern Glassmorphism & Vibrant Design System
+   ========================================================================== */
+
+:root {
+    --primary: #0284c7;
+    --primary-hover: #0369a1;
+    --primary-light: #e0f2fe;
+    --primary-gradient: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --shadow-soft: 0 10px 30px rgba(2, 132, 199, 0.07);
+    --shadow-hover: 0 15px 35px rgba(2, 132, 199, 0.14);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Glassmorphism Navbar */
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+}
+
+.navbar-logo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+}
+
+.navbar-brand:hover .navbar-logo {
+    transform: scale(1.06);
+}
+
+.brand-badge {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.nav-custom-link {
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 8px 16px !important;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-custom-link:hover, .nav-custom-link.active {
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* Modern Card */
+.card-custom {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.card-custom:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header-gradient {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 20px 24px;
+    border-bottom: none;
+}
+
+/* Form Styles */
+.form-label-custom {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-control-custom, .form-select-custom {
+    border: 1.5px solid #cbd5e1;
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+}
+
+.form-control-custom:focus, .form-select-custom:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+    outline: none;
+}
+
+/* Status Badges */
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.badge-status-warning {
+    background-color: #fef3c7;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.badge-status-info {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+.badge-status-success {
+    background-color: #d1fae5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.badge-status-orange {
+    background-color: #ffedd5;
+    color: #c2410c;
+    border: 1px solid #fed7aa;
+}
+
+.badge-status-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.badge-status-secondary {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background: var(--primary-gradient);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+    color: white;
+}
+
+.btn-success-custom {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-success-custom:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+    color: white;
+}
+
+/* Stepper Tracker for Digital Ticket */
+.tracker-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.step-item {
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 24px;
+}
+
+.step-item:last-child {
+    padding-bottom: 0;
+}
+
+.step-item::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 36px;
+    bottom: -6px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.step-item:last-child::before {
+    display: none;
+}
+
+.step-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.step-item.active .step-icon {
+    background: var(--primary-gradient);
+    color: white;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 5px rgba(2, 132, 199, 0.2);
+}
+
+.step-item.done .step-icon {
+    background: #10b981;
+    color: white;
+    border-color: #059669;
+}
+
+/* Display Monitor TV specific */
+.display-tv-body {
+    background: radial-gradient(circle at top right, #0f172a 0%, #020617 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.tv-clock {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tv-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.tv-badge-pill {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Print Styling */
+@media print {
+    .no-print, .navbar-custom, footer {
+        display: none !important;
+    }
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    .card-custom {
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
